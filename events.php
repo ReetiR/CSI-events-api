@@ -5,8 +5,8 @@ $res= $mysqli->query($q);
 $i= 0;
 while($data= $res->fetch_array())
 {
-	$event[$i][name]= $data['name'];
-	$event[$i][id]= $data['id'];
+	$event[$i]['name']= $data['name'];
+	$event[$i]['id']= $data['id'];
 	$i++;
 }
 $finalJson= json_encode($event);
